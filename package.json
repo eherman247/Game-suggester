@@ -1,0 +1,25 @@
+{
+  "name": "game-suggester",
+  "version": "1.0.0",
+  "description": "game suggestion app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon server.js",
+    "swagger": "node ./swagger.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.1",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "swagger-autogen": "^2.23.7"
+  }
+}
