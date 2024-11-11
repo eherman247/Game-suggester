@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": ""
   },
-  "host": "cse-341-jzht.onrender.com",
+  "host": "https://game-suggester.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
