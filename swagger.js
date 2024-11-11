@@ -5,7 +5,7 @@ const doc = {
   info: {
     title: 'My API'
   },
-  host: 'https://game-suggester.onrender.com',
+  host: 'game-suggester.onrender.com',
   schemes: ['https']
 };
 

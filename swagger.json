@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": ""
   },
-  "host": "https://game-suggester.onrender.com",
+  "host": "game-suggester.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -40,6 +40,9 @@
               "type": "object",
               "properties": {
                 "title": {
+                  "example": "any"
+                },
+                "hoursPlayed": {
                   "example": "any"
                 }
               }
@@ -109,8 +112,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "400": {
             "description": "Bad Request"

@@ -7,6 +7,14 @@ content-type: application/json
   "title": "This is a test on local"
 }
 ###
+POST http://localhost:3000/games HTTP/1.1 
+content-type: application/json
+
+{
+  "title": "hi",
+  "hoursPlayed": 5
+}
+###
 GET https://game-suggester.onrender.com/games
 ###
 POST https://game-suggester.onrender.com/games

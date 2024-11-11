@@ -4,7 +4,11 @@ const Schema = mongoose.Schema
 
 const createGameSchema = new Schema({
   title: {
-    type: String
+    type: String,
+    required: true
+  },
+  hoursPlayed: {
+    type: Number
   }
 })
 

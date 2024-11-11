@@ -25,12 +25,13 @@ const getGame = async (req, res) => {
 
 // create a new game
 const createGame = async (req, res) => {
-  const {title} = req.body
-  let stuff = req.body
-  console.log(stuff)
+  
+  const {title, hoursPlayed} = req.body
+  // let stuff = req.body
+  // console.log(stuff)
   // add to db
   try{
-    const game = await Game.create({title})
+    const game = await Game.create({title, hoursPlayed})
     res.status(200).json(game)
   }catch (error) {
     res.status(400).json({error: error.message})
@@ -70,7 +71,7 @@ if(!game) {
   return res.status(400).json({error: "No such game"})
 }
 
-res.status(200).json(game)
+res.status(204).json(game)
 }
 
 module.exports = {getGames,
