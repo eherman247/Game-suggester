@@ -4,15 +4,18 @@ POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-  "title": "This is a test on local"
+  "title": "This is a test on local",
+  "hoursPlayed": 5
 }
 ###
-POST http://localhost:3000/games HTTP/1.1 
+GET http://localhost:3000/games/67311ac060e0e2fd2f1b2
+###
+PUT http://localhost:3000/games/67311ac060e0e2fd2f1b2240 HTTP/1.1 
 content-type: application/json
 
 {
-  "title": "hi",
-  "hoursPlayed": 5
+  "title": "success",
+  "hoursPlayed": 6
 }
 ###
 GET https://game-suggester.onrender.com/games
