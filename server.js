@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const keys = require('./config/keys')
+// const keys = require('./config/keys')
 const path = require('path')
 const express = require('express');
 const app = express();
@@ -15,7 +15,7 @@ const passport = require('passport');
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
-  keys: [keys.session.cookieKey]
+  keys: [process.env.cookieKey]
 }))
 
 app.use(passport.initialize());
