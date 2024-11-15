@@ -10,16 +10,24 @@ const {
   updateGame
 } = require("../controllers/gamesController.js")
 
+const authCheck = (req, res, next) => {
+  if(!req.user){
+    res.redirect('/auth/login');
+  }else{
+    next();
+  }
+}
+
 const router = express.Router()
 
-router.get('/', getGames)
+router.get('/', authCheck, getGames)
 
-router.get('/:id', getGame)
+router.get('/:id', authCheck, getGame)
 
-router.post('/', createGame)
+router.post('/', authCheck, createGame)
 
-router.delete('/:id', deleteGame)
+router.delete('/:id', authCheck, deleteGame)
 
-router.put('/:id', updateGame)
+router.put('/:id', authCheck, updateGame)
 
 module.exports = router
