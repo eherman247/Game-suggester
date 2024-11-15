@@ -10,8 +10,8 @@ const exphbs = require("express-handlebars");
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('./swagger.json')
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json')
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
@@ -28,7 +28,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, 'public')))
 
 app
-  // .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   .use(cors())
   .use(express.json())
 
